@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link rel="stylesheet" href="skills.css">
+</head>
+<body>
+
+    <div class="top-header">
+        <a href="index.html">
+            <img src="Photos/left-arrow.png" alt="arrow" class="arrow">
+        </a>
+        <div class="header-title">
+            SKILLS
+        </div>
+    </div>
+
+    <div class="content">
+        <h2 id="introText" style="opacity: 0; transition: opacity 0.5s;"></h2>
+        <div class="skills-list" id="skillsList">
+            <div class="skills-item">
+                <div class="skills-left">
+                    <img src="Photos/python.jpeg" alt="Logo" class="skills-logo">
+                </div>
+                <div class="skills-right">
+                    <strong>Python</strong>
+                    <br>
+                    
+
+                    <div class="libraries">
+                        <strong>Libraries: </strong> NumPy, Pandas, Matplotlib, SciPy, Scikit-learn, Tensorflow, PySpark etc
+
+                    </div>
+                    <br>
+                    
+                </div>
+            </div>
+
+            <div class="skills-item">
+                <div class="skills-left">
+                    <img src="Photos/matlab.png" alt="Logo" class="skills-logo">
+                </div>
+                <div class="skills-right">
+                    <strong>Matlab</strong>
+                    <br>
+                    
+                </div>
+            </div>
+
+            <div class="skills-item">
+                <div class="skills-left">
+                    <img src="Photos/R.jpeg" alt="Logo" class="skills-logo">
+                </div>
+                <div class="skills-right">
+                    <strong>R Programming</strong><br>
+                    <div class="libraries">
+                        <strong>Libraries: </strong> dplyr, ggplot2, tidyr, stats, etc
+
+                    </div>
+                    
+                    <br>
+                </div>
+            </div>
+
+            <div class="skills-item">
+                <div class="skills-left">
+                    <img src="Photos/mysql.png" alt="Logo" class="skills-logo">
+                </div>
+                <div class="skills-right">
+                    <strong>MYSQL</strong>
+                    <br>
+                    
+                </div>
+            </div>
+
+            <div class="skills-item">
+                <div class="skills-left">
+                    <img src="Photos/big.jpeg" alt="Logo" class="big-logo">
+                </div>
+                <div class="skills-right">
+                    <strong>BigQuery</strong>
+                    <br>
+                    
+                </div>
+            </div>
+
+
+            
+
+
+
+            <div class="skills-item">
+                <div class="skills-left">
+                    <img src="Photos/tableau.png" alt="Logo" class="skills-logo">
+                </div>
+                <div class="skills-right">
+                    
+                    <strong>Tableau</strong>
+                    <br>
+                   
+                </div>
+            </div>
+
+
+            <div class="skills-item">
+                <div class="skills-left">
+                    <img src="Photos/powerbi.png" alt="Logo" class="skills-logo">
+                </div>
+                <div class="skills-right">
+                    
+                    <strong>PowerBI</strong>
+                    <br>
+                   
+                </div>
+            </div>
+
+
+            <div class="skills-item">
+                <div class="skills-left">
+                    <img src="Photos/miniatb.png" alt="Logo" class="skills-logo">
+                </div>
+                <div class="skills-right">
+                    
+                    <strong>MiniTab</strong>
+                    <br>
+                   
+                </div>
+            </div>
+
+
+            <div class="skills-item">
+                <div class="skills-left">
+                    <img src="Photos/excel.png" alt="Logo" class="skills-logo">
+                </div>
+                <div class="skills-right">
+                    
+                    <strong>Excel</strong>
+                    <br>
+                   
+                </div>
+            </div>
+
+
+            <div class="skills-item">
+                <div class="skills-left">
+                    <img src="Photos/office.jpeg" alt="Logo" class="skills-logo">
+                </div>
+                <div class="skills-right">
+                    
+                    <strong>Microsoft Office Suite</strong>
+                    <br>
+                   
+                </div>
+            </div>
+
+
+            <div class="skills-item">
+                <div class="skills-left">
+                    <img src="Photos/figma.webp" alt="Logo" class="skills-logo">
+                </div>
+                <div class="skills-right">
+                    
+                    <strong>Figma</strong>
+                    <br>
+                   
+                </div>
+            </div>
+
+
+            <div class="skills-item">
+                <div class="skills-left">
+                    <img src="Photos/mongo.webp" alt="Logo" class="skills-logo">
+                </div>
+                <div class="skills-right">
+                    
+                    <strong>MongoDB</strong>
+                    <br>
+                   
+                </div>
+            </div>
+
+
+            <div class="skills-item">
+                <div class="skills-left">
+                    <img src="Photos/Fusion360.jpeg" alt="Logo" class="skills-logo">
+                </div>
+                <div class="skills-right">
+                    
+                    <strong>Fusion 360</strong>
+                    <br>
+                </div>
+            </div>
+
+
+            <div class="skills-item">
+                <div class="skills-left">
+                    <img src="Photos/solid.jpeg" alt="Logo" class="skills-logo">
+                </div>
+                <div class="skills-right">
+                    
+                    <strong>Solid Works</strong>
+                    <br>
+                </div>
+            </div>
+
+
+
+            <div class="skills-item">
+                <div class="skills-left">
+                    <img src="Photos/autocad.jpeg" alt="Logo" class="skills-logo">
+                </div>
+                <div class="skills-right">
+                    
+                    <strong>AutoCad</strong>
+                    <br>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script>
+        // Function to show the skills one by one with delay
+        function showSkills() {
+            const introText = document.getElementById("introText");
+            introText.style.opacity = "1";
+
+            const items = document.querySelectorAll('.skills-item'); // Target the correct class
+            items.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.opacity = "1";
+                    item.style.transform = "translateY(0)";
+                }, (index + 1) * 500);
+            });
+        }
+
+        // Trigger the showSkills function on page load
+        window.onload = showSkills;
+
+        // Header scroll hide/show logic
+        let lastScrollPosition = 0;
+        const header = document.querySelector('.top-header');
+
+        window.addEventListener('scroll', () => {
+            let currentScrollPosition = window.pageYOffset;
+
+            if (currentScrollPosition > lastScrollPosition) {
+                header.style.top = '-100px';
+            } else {
+                header.style.top = '0';
+            }
+
+            lastScrollPosition = currentScrollPosition <= 0 ? 0 : currentScrollPosition;
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Experience</title>
+    <link rel="stylesheet" href="work.css">
+</head>
+<body>
+    
+    <div class="top-header">
+        <a href="index.html">
+            <img src="Photos/left-arrow.png" alt="arrow" class="arrow">
+        </a>
+        <div class="header-title">
+            PROFESSIONAL EXPERIENCE
+        </div>
+    </div>
+    
+
+    <div class="content">
+        <h2 id="introText" style="opacity: 0; transition: opacity 0.5s;"></h2>
+        <div class="experience-list" id="experienceList">
+            <div class="experience-item">
+                <div class="experience-left">
+                    <img src="Photos/Kuppismart.jpeg" alt="Logo" class="experience-logo">
+                </div>
+                <div class="experience-right">
+                    <strong>Kuppismart solutions, Hyderabad, India</strong><br>
+                    AIML Developer (Domain head) 
+                    <p class="font">At KuppiSmart Solutions, I led the recruitment of a 6-member team from a pool of over 1000 applicants. I played an integral role in managing and leading the team while conducting research to identify critical parameters influencing the poultry sector. Additionally, I utilized AI and Data Science technologies to design prediction algorithms aimed at ensuring sustainability within the industry.
+                    </p>
+                    <span class="date-range">June 2024 - Current</span>
+                </div>
+            </div>
+            <div class="experience-item">
+                <div class="experience-left">
+                    <img src="Photos/FMAE.jpeg" alt="Logo" class="experience-logo">
+                </div>
+                <div class="experience-right">
+                    <strong>Fraternity of Mechanical and Automotive Engineers (FMAE), Hyderabad, India</strong><br>
+                    Intern
+                    <br>
+                    <p class="font">During my internship at FMAE, I orchestrated the design process by utilizing software tools for various calculations and simulations. Afterward, I fabricated the designed prototype components, employing hands-on techniques such as welding, cutting, and grinding. I then assembled, connected, and tested the prototype, which involved integrating motors, batteries, and controllers, successfully completing the project.
+                    </p>
+                    <span class="date-range">February 2023 - March 2023</span>
+                </div>
+            </div>
+            <div class="experience-item">
+                <div class="experience-left">
+                    <img src="Photos/NUS.jpeg" alt="Logo" class="experience-logo">
+                </div>
+                <div class="experience-right">
+                    <strong>National University of Singapore, Singapore</strong><br>
+                    Research Intern
+                    <br>
+                    <p class="font">During my time at the National University of Singapore, I undertook a research project where I applied machine learning techniques to cancer genome data. The goal was to predict genetic changes influencing cancer susceptibility. This project allowed me to enhance my skills in data analytics, machine learning, and deep learning while contributing to important healthcare research.
+                    </p>
+                    <span class="date-range">December 2023 - April 2023</span>
+                </div>
+            </div>
+            <div class="experience-item">
+                <div class="experience-left">
+                    <img src="Photos/HPE.jpeg" alt="Logo" class="experience-logo">
+                </div>
+                <div class="experience-right">
+                    <strong>Hewlett Packard Enterprise</strong><br>
+                    Research Intern
+                    <br>
+                    <p class="font">As part of my training with Hewlett Packard Enterprise, I performed Data Engineering on various large datasets. This hands-on experience involved working with big data tools and techniques, which helped me gain practical knowledge in handling and analyzing large-scale datasets efficiently, further sharpening my data engineering skills.
+                    </p>
+                    <span class="date-range">May 2022 - June 2023</span>
+                </div>
+            </div>
+            <div class="experience-item">
+                <div class="experience-left">
+                    <img src="Photos/VSP.jpeg" alt="Logo" class="experience-logo">
+                </div>
+                <div class="experience-right">
+                    <strong>RINL Vizag Steel Plant, Vizag, India</strong><br>
+                    Automobile Intern
+                    <br>
+                    <p class="font">At RINL Vizag Steel Plant, I conducted research on technological advancements in vehicle engines at India's only port-based steel plant. Through this internship, I gained practical insights into the plant’s industrial operations, supply chain analytics, and the overall steel production process.
+                    </p>
+                    <span class="date-range">May 2022 - June 2023</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showExperience() {
+            const introText = document.getElementById("introText");
+            introText.style.opacity = "1";
+
+            const items = document.querySelectorAll('.experience-item');
+            items.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.opacity = "1";
+                    item.style.transform = "translateY(0)";
+                }, (index + 1) * 500);
+            });
+        }
+
+        window.onload = showExperience;
+
+        let lastScrollPosition = 0;
+        const header = document.querySelector('.top-header');
+
+        window.addEventListener('scroll', () => {
+            let currentScrollPosition = window.pageYOffset;
+
+            if (currentScrollPosition > lastScrollPosition) {
+                header.style.top = '-100px';
+            } else {
+                header.style.top = '0';
+            }
+
+            lastScrollPosition = currentScrollPosition <= 0 ? 0 : currentScrollPosition;
+        });
+    </script>
+
+</body>
+</html>

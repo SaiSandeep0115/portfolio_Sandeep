@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses and Certifications</title>
+    <link rel="stylesheet" href="courses.css">
+</head>
+<body>
+    
+    <div class="top-header">
+        <a href="index.html">
+            <img src="Photos/left-arrow.png" alt="arrow" class="arrow">
+        </a>
+        <div class="header-title">
+            COURSES AND CERTIFICATIONS
+        </div>
+    </div>
+    
+    <div class="content">
+        <h2 id="introText" style="opacity: 0; transition: opacity 0.5s;"></h2>
+        <div class="courses" id="coursesList">
+            <div class="courses-item">
+                <div class="Courses-left">
+                    <img src="Photos/google.jpeg" alt="Logo" class="google-logo">
+                </div>
+                <div class="courses-right">
+                    <strong>Google Data Analytics </strong><br>
+                    <p>Google, Coursera.</p>
+                    <br>
+                    
+                </div>
+            </div>
+
+            <div class="courses-item">
+                <div class="Courses-left">
+                    <img src="Photos/UA.jpeg" alt="Logo" class="UA-logo">
+                </div>
+                <div class="courses-right">
+                    <strong>Data Analytics for Lean Six Sigma </strong><br>
+                    <p>University of Amsterdam, Coursera.</p>
+                    <br>
+                    
+                </div>
+            </div>
+
+            <div class="courses-item">
+                <div class="Courses-left">
+                    <img src="Photos/deep.jpeg" alt="Logo" class="deep-logo">
+                </div>
+                <div class="courses-right">
+                    <strong>Machine Learning </strong><br>
+                    <p>Deeplearning.AI, Coursera.</p>
+                    <br>
+                   
+                  
+
+                </div>
+            </div>
+
+
+            <div class="courses-item">
+                <div class="Courses-left">
+                    <img src="Photos/stanfird.jpeg" alt="Logo" class="stanford-logo">
+                </div>
+                <div class="courses-right">
+                    <strong>Algorithms </strong><br>
+                    <p>Stanford University, Coursera.</p>
+                    <br>
+                </div>
+            </div>
+
+
+            
+        </div>
+    </div>
+
+    <script>
+        function showCourses() {
+            const introText = document.getElementById("introText");
+            introText.style.opacity = "1";
+    
+            const items = document.querySelectorAll('.courses-item');
+            items.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.opacity = "1";
+                    item.style.transform = "translateY(0)";
+                }, (index + 1) * 500);
+            });
+        }
+    
+        window.onload = showCourses;
+    </script>
+    
+
+</body>
+</html>

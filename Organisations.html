@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organisations</title>
+    <link rel="stylesheet" href="organisations.css">
+    
+    
+</head>
+<body>
+
+    <!-- Horizontal Top Header -->
+    <div class="top-header">
+        <a href="index.html">
+            <img src="Photos/left-arrow.png" alt="arrow" class="arrow">
+        </a>
+        <div class="header-title">
+            ORGANISATION
+        </div>
+    </div>
+    
+
+    <!-- Content Section -->
+    <div class="content">
+        <h2 id="introText" style="opacity: 0; transition: opacity 0.5s;"></h2>
+        <div class="organisation-list" id="organisationList">
+
+           
+            
+                <div class="organisation-item">
+                    <div class="organisation-left">
+                        <img src="Photos/svsp.jpeg" alt="SVSP" class="organisation-logo">
+                    </div>
+                    <div class="organisation-right">
+                        <strong>SVSP Technologies</strong><br>
+                        <i>Founder</i> 
+                        <br>
+                        Directing the establishment and development of a startup, overseeing the optimization of a data-driven productivity application.
+                        
+                    </div>
+                </div>
+            
+            
+            
+                <div class="organisation-item">
+                    <div class="organisation-left">
+                        <img src="Photos/sahiti.png" alt="Sahiti" class="organisation-logo">
+                    </div>
+                    <div class="organisation-right">
+                        <strong>Sahiti TLA</strong><br>
+                        <i>Club executive</i>
+                        <br>
+                        Actively took responsibility for team management, recruitment, volunteering, and technical aspects within the club. Performed as a dancer at the Annual Fest “Riviera 2020” and other cultural events.
+                        <br>
+                    </div>
+                </div>
+
+                   
+            
+
+           
+                <div class="organisation-item">
+                    <div class="organisation-left">
+                        <img src="Photos/urban.jpeg" alt="urban" class="organisation-logo">
+                    </div>
+                    <div class="organisation-right">
+                        <strong>Chronic Urban Poverty</strong><br>
+                        <i>Documentarian </i> 
+                        <br>
+                        Documented the adversities faced by my local slum residents to raise awareness.
+                        <br>
+                    </div>
+                </div>
+                  
+
+           
+        </div>
+            
+
+           
+
+        </div>
+    </div>
+
+    <script>
+        // Function to show the organisations one by one with delay
+        function showOrganisations() {
+            const introText = document.getElementById("introText");
+            introText.style.opacity = "1"; // Show intro text
+
+            const items = document.querySelectorAll('.organisation-item');
+            items.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.opacity = "1"; // Show the item
+                    item.style.transform = "translateY(0)"; // Reset the upward shift
+                }, (index + 1) * 500); // Delay each item by 500ms
+            });
+        }
+
+        // Trigger the showOrganisations function on page load
+        window.onload = showOrganisations;
+
+        // Header scroll hide/show logic
+        let lastScrollPosition = 0;
+        const header = document.querySelector('.top-header');
+
+        window.addEventListener('scroll', () => {
+            let currentScrollPosition = window.pageYOffset;
+
+            if (currentScrollPosition > lastScrollPosition) {
+                // Scrolling down, hide header
+                header.style.top = '-100px';
+            } else {
+                // Scrolling up, show header
+                header.style.top = '0';
+            }
+
+            // Update the last scroll position
+            lastScrollPosition = currentScrollPosition <= 0 ? 0 : currentScrollPosition;
+        });
+    </script>
+
+
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <link rel="stylesheet" href="education.css">
+    <style>
+     
+        /* Anchor tag styles to remove underline and other default styles */
+        .education-link {
+            text-decoration: none; /* Remove the underline */
+            color: inherit; /* Inherit the text color from the parent element */
+            display: block; /* Ensure the anchor surrounds the entire education item */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-header">
+        <a href="index.html">
+            <img src="Photos/left-arrow.png" alt="arrow" class="arrow">
+        </a>
+        <div class="header-title">
+            EDUCATION
+        </div>
+    </div>
+    
+    <!-- Content Section -->
+    <div class="content">
+        <h2 id="introText" style="opacity: 0; transition: opacity 0.5s;"></h2>
+        <div class="education-list" id="educationList">
+
+            <!-- Education Item with Anchor Tag -->
+            <a href="https://nus.edu.sg" target="_blank" class="education-link">
+                <div class="education-item">
+                    <div class="education-left">
+                        <img src="Photos/NUS.jpeg" alt="NUS Logo" class="education-logo">
+                    </div>
+                    <div class="education-right">
+                        <strong>National University of Singapore, Singapore</strong><br>
+                        Masters in Maritime Technology and Management
+                        <br>
+                        <span class="date-range">August 2024 - Current</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://vitbangalore.in/&ved=2ahUKEwjC-ey50cqIAxVRTGwGHb8QMXEQFnoECDsQAQ&usg=AOvVaw0H2vepMVbVCk5Lf48QwASs" target="_blank" class="education-link">
+                <div class="education-item">
+                    <div class="education-left">
+                        <img src="Photos/vitb.jpeg" alt="VIT Bangalore Logo" class="education-logo">
+                    </div>
+                    <div class="education-right">
+                        <strong>Vellore Institute of Technology, Bangalore, India</strong><br>
+                        Post Graduate Program (Data Science) - <strong>CGPA - 10/10</strong>
+                        <br>
+                        <span class="date-range">August 2023 - June 2024</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://vit.ac.in" target="_blank" class="education-link">
+                <div class="education-item">
+                    <div class="education-left">
+                        <img src="Photos/vit .png" alt="VIT Vellore Logo" class="education-logo">
+                    </div>
+                    <div class="education-right">
+                        <strong>Vellore Institute of Technology, Vellore, India</strong><br>
+                        Bachelor of Technology in Mechanical Engineering - <strong>CGPA - 8.15/10</strong>
+                        <br>
+                        <span class="date-range">July 2019 - August 2023</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="http://www.saradaedu.com/" target="_blank" class="education-link">
+                <div class="education-item">
+                    <div class="education-left">
+                        <img src="Photos/sarada.jpeg" alt="Sarada College Logo" class="education-logo">
+                    </div>
+                    <div class="education-right">
+                        <strong>Sri Sarada Junior College, Vijayawada, India</strong><br>
+                        Class XII (State Board), MPC - <strong>CGPA - 9.94/10</strong>
+                        <br>
+                        <span class="date-range">June 2017 - April 2019</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://kkrgowtham.com/" target="_blank" class="education-link">
+                <div class="education-item">
+                    <div class="education-left">
+                        <img src="Photos/kkr.jpeg" alt="KKR Gowtham School Logo" class="education-logo">
+                    </div>
+                    <div class="education-right">
+                        <strong>Dr. KKR's Gowtham International School, Vijayawada, India</strong><br>
+                        Class X (CBSE) - <strong>CGPA - 10/10</strong>
+                        <br>
+                        <span class="date-range">June 2016 - May 2017</span>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+    <script>
+        // Function to show the qualifications one by one with delay
+        function showEducation() {
+            const introText = document.getElementById("introText");
+            introText.style.opacity = "1";
+
+            const items = document.querySelectorAll('.education-item');
+            items.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.opacity = "1"; // Show the item
+                    item.style.transform = "translateY(0)"; // Reset the upward shift
+                }, (index + 1) * 500); // Delay each item by 500ms
+            });
+        }
+
+        // Trigger the showEducation function on page load
+        window.onload = showEducation;
+
+        // Header scroll hide/show logic
+        let lastScrollPosition = 0;
+        const header = document.querySelector('.top-header');
+
+        window.addEventListener('scroll', () => {
+            let currentScrollPosition = window.pageYOffset;
+
+            if (currentScrollPosition > lastScrollPosition) {
+                // Scrolling down, hide header
+                header.style.top = '-100px';
+            } else {
+                // Scrolling up, show header
+                header.style.top = '0';
+            }
+
+            // Update the last scroll position
+            lastScrollPosition = currentScrollPosition <= 0 ? 0 : currentScrollPosition;
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+

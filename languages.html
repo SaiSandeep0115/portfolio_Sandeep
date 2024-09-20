@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Languages</title>
+    <link rel="stylesheet" href="language.css">
+</head>
+<body>
+    <div class="top-header">
+        <a href="index.html">
+            <img src="Photos/left-arrow.png" alt="arrow" class="arrow">
+        </a>
+        <div class="header-title">
+            LANGUAGES
+        </div>
+    </div>
+    
+    <div class="content">
+        <h2 id="introText" style="opacity: 0; transition: opacity 0.5s;"></h2>
+        <div class="languages" id="languagesList">
+            <div class="language-item">English - Proficient</div>
+            <div class="language-item">Telugu - Proficient</div>
+            <div class="language-item">Hindi - Basic Proficiency</div>
+            <div class="language-item">Tamil - Basic Proficiency</div>
+            <div class="language-item">German - Basic Proficiency</div>
+        </div>
+    </div>
+
+    <script>
+        function showLanguages() {
+            const introText = document.getElementById("introText");
+            introText.style.opacity = "1";
+
+            const items = document.querySelectorAll('.language-item');
+            items.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.opacity = "1";
+                    item.style.transform = "translateY(0)";
+                }, (index + 1) * 500);
+            });
+        }
+
+        window.onload = showLanguages;
+    </script>
+
+</body>
+</html>

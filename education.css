@@ -1,0 +1,127 @@
+/* Ensure background covers entire screen */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Times New Roman', serif;
+    background: linear-gradient(135deg, #a2c2e6, #c2d9e8, #e8f0f8, #b3e0ff, #b9fbc0);
+    background-attachment: fixed; /* Ensure background stays fixed */
+}
+
+.top-header {
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(135deg, #0077b6, #00b4d8, #90e0ef);
+    color: white;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 30px;
+    position: relative; /* Allows positioning child elements absolutely */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-title {
+    position: relative;
+    z-index: 1; /* Ensures the text is on top */
+}
+
+.arrow {
+    width: 70px; /* Adjust size as needed */
+    height: 70px;
+    position: absolute;
+    top: 50%; /* Vertically centers the arrow in the header */
+    left: 20px; /* Places the arrow on the left side with some padding */
+    transform: translateY(-50%); /* Centers the arrow vertically */
+}
+
+/* Hover effect for the top header */
+.top-header:hover {
+   
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Content area */
+.content {
+    margin-top: 1px;
+    padding: 20px;
+    text-align: left;
+}
+
+/* Education list styling */
+.education-list {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #333;
+}
+
+/* Education item layout for left and right side by side */
+.education-item {
+    display: flex; /* Enables flexbox for the item */
+    align-items: center; /* Vertically aligns the items */
+    margin-bottom: 20px;
+    background-color: #e0f7fa;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Start with an upward shift */
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Left section for education logo or text */
+.education-left {
+    width: 12%; /* Adjust width as needed */
+    display: flex;
+    align-items: center; /* Center the content vertically */
+    justify-content: center; /* Center the content horizontally */
+    padding-right: 10px; /* Add spacing between left and right sections */
+}
+
+/* Education logo inside left section */
+.education-logo {
+    width: 100%;
+    height: 150px;
+}
+
+/* Right section for education content */
+.education-right {
+    width: 80%; 
+    padding-left: 20px;
+}
+
+/* For smaller screens, adjust layout to be stacked */
+@media (max-width: 768px) {
+    .education-item {
+        flex-direction: column; /* Stack left and right on smaller screens */
+        text-align: center;
+    }
+    .education-left, .education-right {
+        width: 100%; /* Full width on small screens */
+        padding: 0;
+    }
+}
+
+
+/* Hover effect on education item */
+.education-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Date range styling */
+.date-range {
+    font-size: 16px;
+    color: #0077b6;
+    font-style: italic;
+    margin-top: 10px;
+    display: block;
+    position: relative;
+    /* Adjust margin if needed */
+}
+
+
+.date-range::before {
+    content: none; }
