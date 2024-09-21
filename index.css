@@ -7,6 +7,8 @@ html, body {
     scroll-behavior: smooth; 
     overflow-x: hidden; 
     font-family: 'Fira Sans Condensed', sans-serif; 
+   
+    
 }
 .Main-page {
     position: relative;
@@ -145,13 +147,38 @@ a {
     100% { background-position: 0% 50%; }
 }
 
+
+
 .Bitmoji {
     position: absolute;
-    height: 70%;
-    bottom: 0;
+    height: 70%; /* Adjust as needed */
+    bottom: 0; /* Aligns at the bottom */
     left: 50%;
     transform: translateX(-50%);
 }
+
+.responsive-text {
+    display: none; /* Hide by default */
+    position: absolute;
+    bottom: 65%; 
+    left: 50%;
+    transform: translateX(-50%); /* Center the text */
+    color: white; /* Text color */
+    font-size: 5vw; /* Responsive font size */
+    z-index: 1; /* Ensure it appears above the Bitmoji */
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    .responsive-text {
+        display: block; /* Show text on mobile */
+    }
+}
+
+
+
+
 
 .NUS, .HPE, .VIT, .AI, .MT, .DS, .FMAE, .VSP, .org, .python,.resume{
    
@@ -665,3 +692,145 @@ hr {
 }
 
 
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width: 768px) {
+    .NUS, .HPE, .VIT, .AI, .MT, .DS, .FMAE, .VSP, .org, .python, .resume {
+        display: none; 
+    }
+}
+@media (max-width: 768px) {
+    .name, .hovername {
+        display: none; /* Hides the name on mobile */
+    }
+}
+@media (max-width: 768px) {
+    .icon-container {
+        display: flex;
+        flex-wrap: wrap; /* Allows icons to wrap to the next line */
+        justify-content: center; /* Centers icons */
+        gap: 12%; /* Adjust gap to a percentage for flexibility */
+        padding: 10px; /* Add padding for some space around */
+    }
+
+    .icon1, .icon2, .icon3, .icon4 {
+        width: 10vw; /* Width in viewport units */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media (max-width: 768px) {
+
+    .about-page{
+        height: 70vh;
+    }
+
+    .Hello{
+        display: none;
+    }
+
+
+    .profile-photo {
+        height: 70%; /* Adjust this value as needed */
+        width: 70%;  /* Adjust this value as needed */
+    }
+
+    .about {
+        font-size: 30px; /* Decrease font size */
+    }
+
+    .description {
+        font-size: 10px; /* Decrease font size */
+    }
+
+    .about-section {
+        padding: 10px; /* Decrease padding */
+        margin: 0; /* Adjust margin as needed */
+        height: 30vh;
+    }
+}
+@media (max-width: 768px) {
+    .boxes-section{
+        height: 40vh;
+    }
+    .box {
+        height: 200px; /* Adjust as needed */
+        width: 120px; /* Adjust as needed */
+    }
+
+    .box-text{
+        font-size: 16px;
+    }
+}
+@media (max-width: 768px) {
+    .N-Header {
+        padding-top: 3px;
+       
+    }
+
+    .N {
+        font-size: 20px; /* Decrease font size for mobile */
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column; /* Stack elements vertically */
+        height: auto; /* Allow height to adjust based on content */
+        padding: 20px; /* Add padding for spacing */
+    }
+
+    .contact-info, .contact-form {
+        width: 100%; /* Full width for mobile */
+        margin: 0; /* Remove margins */
+        padding: 10px; /* Add some padding */
+    }
+
+    .contact-header h1 {
+        font-size: 36px; /* Decrease header font size */
+    }
+
+    .contact-form input, .contact-form textarea {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .contact-form button {
+        padding: 10px 20px; /* Adjust button padding */
+    }
+
+    .checkbox-container {
+        flex-direction: column; /* Stack checkbox and label */
+    }
+
+    .checkbox-container label {
+        margin-left: 0; /* Align label for smaller screens */
+    }
+
+    .mail, .call {
+        width: 30px; /* Decrease icon sizes */
+        height: 30px; /* Decrease icon sizes */
+    
+    
+    }
+
+    .contact-header h1::before {
+    
+        
+        font-size: 100px;
+        
+    }
+
+
+
+
+
+}
