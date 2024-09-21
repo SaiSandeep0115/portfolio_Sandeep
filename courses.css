@@ -121,3 +121,45 @@ html, body {
     width: 150px;
     height: 150px;
 }
+
+@media (max-width: 768px) {
+    .top-header {
+        font-size: 24px; /* Decrease font size for mobile */
+        padding: 15px; /* Adjust padding for mobile */
+        text-align: center; /* Center text in header */
+    }
+
+    .content {
+        padding: 10px; /* Adjust padding for mobile */
+        text-align: center; /* Center text in the content area */
+    }
+
+    .courses-item {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        padding: 20px; /* Adjust padding for mobile */
+        text-align: center; /* Center the text */
+    }
+
+    .courses-left {
+        width: 100%; /* Full width on small screens */
+        margin-bottom: 10px; /* Add space between items */
+    }
+
+    .courses-right {
+        width: 100%; /* Full width on small screens */
+        padding-left: 0; /* Remove left padding for mobile */
+    }
+
+    .courses-right strong {
+        font-size: 20px; /* Decrease font size for mobile */
+    }
+
+    .deep-logo,
+    .google-logo,
+    .UA-logo,
+    .stanford-logo {
+        width: 100px; /* Decrease logo size for mobile */
+        height: 100px; /* Decrease logo size for mobile */
+    }
+}

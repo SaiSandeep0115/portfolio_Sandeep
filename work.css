@@ -124,3 +124,29 @@ html, body {
 .font{
     font-size: 15px;
 }
+
+
+@media (max-width: 768px) {
+    .top-header{
+        height: 35px;
+        font-size: 20px;
+    }
+    .experience-item {
+        flex-direction: column; /* Stack left and right on smaller screens */
+        text-align: center;
+    }
+    
+    .experience-left, .experience-right {
+        width: 100%; /* Full width on small screens */
+        padding: 0; /* Remove padding */
+    }
+
+    .experience-left {
+        margin-bottom: 10px; /* Space between logo and text */
+    }
+
+    .experience-logo {
+        width: 40%; /* Adjust logo size for mobile */
+        height: auto; /* Maintain aspect ratio */
+    }
+}

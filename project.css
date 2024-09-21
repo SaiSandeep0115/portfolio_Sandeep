@@ -124,3 +124,32 @@ html, body {
 .font{
     font-size: 15px;
 }
+
+
+@media (max-width: 768px) {
+    .top-header{
+        height: 35px;
+        font-size: 24px;
+    }
+    .project-item {
+        flex-direction: column; /* Stack left and right sections */
+        text-align: center; /* Center text */
+    }
+
+    .project-left {
+        width: 100%; /* Full width on small screens */
+        padding: 0; /* No padding */
+        margin-bottom: 10px; /* Space between logo and text */
+    }
+
+    .project-logo {
+        height: 150px; /* Adjust logo height */
+        width: auto; /* Maintain aspect ratio */
+        margin-bottom: 10px; /* Space between image and text */
+    }
+
+    .project-right {
+        width: 100%; /* Full width on small screens */
+        padding-left: 0; /* Remove left padding */
+    }
+}

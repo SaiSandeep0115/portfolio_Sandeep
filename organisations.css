@@ -90,23 +90,33 @@ html, body {
 
 
 @media (max-width: 768px) {
+
+    .top-header {
+        font-size: 20px;
+        height: 35px;
+    }
+
+
+
     .organisation-item {
-        flex-direction: column; /* Stack left and right on smaller screens */
-        text-align: center;
+        flex-direction: column; /* Stack left and right sections */
+        text-align: center; /* Center text */
     }
-    .organisation-left, .organisation-right {
+
+    .organisation-left {
         width: 100%; /* Full width on small screens */
-        padding: 0;
+        padding: 0; /* No padding */
+        margin-bottom: 10px; /* Space between logo and text */
     }
-}
 
-.organisation-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
-}
+    .organisation-logo {
+        height: 150px; /* Adjust logo height */
+        width: auto; /* Maintain aspect ratio */
+        margin-bottom: 10px; /* Space between image and text */
+    }
 
-
-.organisation-link {
-    text-decoration: none; 
-    color: inherit;
+    .organisation-right {
+        width: 100%; /* Full width on small screens */
+        padding-left: 0; /* Remove left padding */
+    }
 }
