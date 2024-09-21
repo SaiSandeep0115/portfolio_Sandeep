@@ -171,6 +171,10 @@ a {
 
 
 @media (max-width: 768px) {
+
+    .Main-page{
+        height: 70vh;
+    }
     .responsive-text {
         display: block; /* Show text on mobile */
     }

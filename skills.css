@@ -142,6 +142,12 @@ html, body {
 
 
 @media (max-width: 768px) {
+
+
+    .top-header{
+        height: 35px;
+        font-size: 24px;
+    }
     .skills-item {
         flex-direction: column; /* Stack left and right on smaller screens */
         text-align: center; /* Center text */
