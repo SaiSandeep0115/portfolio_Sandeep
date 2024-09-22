@@ -25,6 +25,7 @@ html, body {
 .header-title {
     position: relative;
     z-index: 1; /* Ensures the text is on top */
+    text-align: center;
 }
 
 .arrow {
@@ -92,10 +93,13 @@ html, body {
 @media (max-width: 768px) {
 
     .top-header {
-        font-size: 15px;
+        font-size: 14px;
         height: 35px;
     }
 
+    .organisation, .extracurriculars {
+        display: block;
+    }
 
 
     .organisation-item {
