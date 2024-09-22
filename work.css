@@ -129,7 +129,7 @@ html, body {
 @media (max-width: 768px) {
     .top-header{
         height: 35px;
-        font-size: 20px;
+        font-size: 15px;
     }
     .experience-item {
         flex-direction: column; /* Stack left and right on smaller screens */

@@ -733,7 +733,7 @@ hr {
 @media (max-width: 768px) {
 
     .about-page{
-        height: 60vh;
+        height: 65vh;
     }
 
     .Hello{
@@ -757,7 +757,7 @@ hr {
     .about-section {
         padding: 10px; /* Decrease padding */
         margin: 0; /* Adjust margin as needed */
-        height: 25vh;
+        height: 30vh;
     }
 }
 @media (max-width: 768px) {
